@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tech2etc Tutorial</title>
+    <title>slideshow</title>
+    <!-- costom css -->
     <link href="style.css" rel="stylesheet" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
+
   <body>
-    <section class="calculator">
-      <form>
-        <input type="text" class="screen" />
-      </form>
-      <div class="buttons">
-        <button type="button" class="btn btn-yellow" data-num="*">*</button>
-        <button type="button" class="btn btn-yellow" data-num="/">/</button>
-        <button type="button" class="btn btn-yellow" data-num="-">-</button>
-        <button type="button" class="btn btn-yellow" data-num="+">+</button>
+    <div class="slidshow-container">
+      <div class="slidshow-elements">
+        <div class="slidshow-element current">
+          <ion-icon name="football"></ion-icon>
+          <h2>Football</h2>
+        </div>
 
-        <button type="button" class="btn btn-grey" data-num="9">9</button>
-        <button type="button" class="btn btn-grey" data-num="8">8</button>
-        <button type="button" class="btn btn-grey" data-num="7">7</button>
-        <button type="button" class="btn btn-grey" data-num="6">6</button>
-        <button type="button" class="btn btn-grey" data-num="5">5</button>
-        <button type="button" class="btn btn-grey" data-num="4">4</button>
-        <button type="button" class="btn btn-grey" data-num="3">3</button>
-        <button type="button" class="btn btn-grey" data-num="2">2</button>
-        <button type="button" class="btn btn-grey" data-num="1">1</button>
-        <button type="button" class="btn btn-grey" data-num="0">0</button>
-        <button type="button" class="btn btn-grey" data-num=".">.</button>
+        <div class="slidshow-element">
+          <ion-icon name="Volleyball"></ion-icon>
+          <h1>Games is on</h1>
+          <h2>Volleyball</h2>
+        </div>
 
-        <button type="button" class="btn btn-equal">=</button>
-        <button type="button" class="btn btn-clear">C</button>
+        <div class="slidshow-element">
+          <ion-icon name="walk"></ion-icon>
+          <h2>walk</h2>
+        </div>
+        <div class="slidshow-element">
+          <ion-icon name="airplane"></ion-icon>
+          <h2>Airplane</h2>
+        </div>
+        <div class="slidshow-element">
+          <ion-icon name="time"></ion-icon>
+          <h2>Alarm</h2>
+        </div>
       </div>
-    </section>
+    </div>
 
     <script src="./script.js"></script>
   </body>

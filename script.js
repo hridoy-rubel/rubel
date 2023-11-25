@@ -1,28 +1,14 @@
-(function () {
-  let screen = document.querySelector(".screen");
-  let buttons = document.querySelectorAll(".btn");
-  let clear = document.querySelector(".btn-clear");
-  let equal = document.querySelector(".btn-equal");
+const slideshowElements = document.querySelectorAll(".slidshow-element");
 
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function (e) {
-      let value = e.target.dataset.num;
-      if (!value) {
-        return;
-      }
-      screen.value += value;
-    });
-  });
-
-  equal.addEventListener("click", function () {
-    if (screen.value === "") {
-      screen.value = "";
-    } else {
-      let answer = eval(screen.value);
-      screen.value = answer;
-    }
-  });
-  clear.addEventListener("click", function () {
-    screen.value = "";
-  });
-})();
+let countElement = 1;
+setInterval(() => {
+  countElement++;
+  let currentElement = document.querySelector(".current");
+  currentElement.classList.remove("current");
+  if (countElement > slideshowElements.length) {
+    slideshowElements[0].classList.add("current");
+    countElement = 1;
+  } else {
+    currentElement.nextElementSibling.classList.add("current");
+  }
+}, 2000);
